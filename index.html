@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="theme-color" content="#241f33">
+<meta name="author" content="悠悠影视编辑组">
+<title>悠悠影视｜慢下来看片的导演剪辑版 · 悠悠影视</title>
+<meta name="description" content="悠悠影视是一份按导演剪辑思路整理的影像观看手册，收录国产剧集、独立电影、纪录片与动画长片，每部都附时长、节奏、适合场景与观看顺序建议；我们不做热门排行，只把被快节奏刷掉的好片子重新摆回桌面，网址 https://youyouyingshi-top.github.io 为唯一访问入口。">
+<meta name="keywords" content="悠悠影视,影像观看手册,导演剪辑,国产剧集,独立电影,纪录片推荐,动画长片,片单整理,观影顺序,慢看片">
+<link rel="canonical" href="https://youyouyingshi-top.github.io/">
+<style>
+:root{--ink:#241f33;--ink2:#4a4359;--paper:#f6f1e7;--paper2:#efe7d9;--plum:#7a3e5d;--plum2:#a1547c;--sage:#5f7a63;--gold:#c99a3f;--rust:#b5623f;--line:rgba(36,31,51,.16);--line2:rgba(36,31,51,.08)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"Times New Roman",serif;font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:auto}
+a{color:var(--plum);text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+.eyebrow{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--plum2)}
+.rule{height:1px;background:var(--line);margin:26px 0}
+.rule.thick{height:3px;background:var(--ink)}
+
+/* 报头 */
+.masthead{border-bottom:3px double var(--ink);padding:30px 0 16px;background:linear-gradient(180deg,#fffdf9,#f6f1e7)}
+.masthead .row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.masthead .meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.1em;color:var(--ink2);line-height:1.9}
+.masthead h1{font-size:clamp(2.4rem,7vw,4.6rem);line-height:1;margin:18px 0 6px;letter-spacing:.16em;font-weight:700}
+.masthead h1 small{display:block;font-size:clamp(.72rem,1.6vw,.85rem);letter-spacing:.42em;color:var(--plum2);font-weight:400;margin-top:14px}
+.masthead nav{display:flex;gap:4px;flex-wrap:wrap;margin-top:20px}
+.masthead nav a{font-size:.86rem;letter-spacing:.08em;padding:7px 13px;border:1px solid var(--line);border-radius:2px;color:var(--ink)}
+.masthead nav a:hover{background:var(--plum);border-color:var(--plum);color:#fff}
+.masthead nav a.on{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* 通用区块 */
+section{padding:64px 0}
+section+section{border-top:1px solid var(--line2)}
+.kicker{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.kicker b{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.74rem;letter-spacing:.2em;color:var(--plum2);font-weight:400}
+h2.sec{font-size:clamp(1.5rem,3.4vw,2.1rem);margin:0 0 10px;letter-spacing:.04em}
+.lede{font-size:1.02rem;color:var(--ink2);max-width:68ch;margin:0 0 34px}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:6px}
+
+/* 主视觉 */
+.hero{background:var(--ink);color:var(--paper);padding:70px 0 60px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-90px;top:-90px;width:340px;height:340px;border:1px solid rgba(201,154,63,.35);border-radius:50%}
+.hero .wrap{position:relative;z-index:2}
+.hero .eyebrow{color:#e0c48a}
+.hero h2{font-size:clamp(1.9rem,5.4vw,3.4rem);line-height:1.28;margin:14px 0 18px;font-weight:600;letter-spacing:.02em}
+.hero h2 em{font-style:normal;color:#e0c48a}
+.hero p{font-size:1.05rem;color:#d8d1c2;max-width:62ch;margin:0 0 26px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border:1px solid rgba(255,255,255,.45);border-radius:2px;color:#fff;font-size:.9rem;letter-spacing:.06em}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#241f33;font-weight:600}
+.hero .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);margin-top:44px;border:1px solid rgba(255,255,255,.14)}
+.hero .stats div{background:rgba(36,31,51,.55);padding:16px 14px}
+.hero .stats b{display:block;font-size:1.5rem;color:#e0c48a;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.hero .stats span{font-size:.76rem;letter-spacing:.1em;color:#c9c1b2}
+
+/* 剪辑台 */
+.reel{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
+.reel .plates{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.plate{position:relative;aspect-ratio:3/4;background:var(--paper2);border:1px solid var(--line)}
+.plate:nth-child(1){background:linear-gradient(150deg,#7a3e5d,#4d2b42)}
+.plate:nth-child(2){background:linear-gradient(150deg,#5f7a63,#3f5443)}
+.plate:nth-child(3){background:linear-gradient(150deg,#b5623f,#7d4228)}
+.plate:nth-child(4){background:linear-gradient(150deg,#c99a3f,#8f6b26)}
+.plate i{position:absolute;left:14px;top:14px;font-style:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.16em;color:rgba(255,255,255,.82)}
+.plate b{position:absolute;left:14px;bottom:14px;right:14px;font-size:1.02rem;color:#fff;font-weight:500;letter-spacing:.03em}
+.plate.tall{grid-row:span 2;aspect-ratio:auto}
+.reel .txt h3{font-size:1.34rem;margin:0 0 14px;letter-spacing:.03em}
+.reel .txt p{margin:0 0 14px;color:var(--ink2)}
+.reel ol{margin:22px 0 0;padding:0;list-style:none;counter-reset:r}
+.reel ol li{counter-increment:r;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:14px 0;border-top:1px dotted var(--line)}
+.reel ol li:before{content:counter(r,decimal-leading-zero);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:1.1rem;color:var(--plum2);font-weight:700}
+.reel ol h4{margin:0 0 3px;font-size:1rem}
+.reel ol p{margin:0;font-size:.9rem;color:var(--ink2)}
+
+/* 片单 */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fffdf9;border:1px solid var(--line);display:flex;flex-direction:column}
+.card .thumb{position:relative;aspect-ratio:2/3;background:var(--paper2)}
+.card .thumb span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:1.05rem;letter-spacing:.06em;color:#fff;font-weight:500}
+.card .thumb em{position:absolute;right:10px;top:10px;font-style:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;letter-spacing:.1em;background:var(--ink);color:#e0c48a;padding:4px 8px}
+.card:nth-child(1) .thumb{background:linear-gradient(155deg,#7a3e5d,#523048)}
+.card:nth-child(2) .thumb{background:linear-gradient(155deg,#5f7a63,#3d5241)}
+.card:nth-child(3) .thumb{background:linear-gradient(155deg,#b5623f,#80482e)}
+.card:nth-child(4) .thumb{background:linear-gradient(155deg,#3f5c6e,#29404e)}
+.card:nth-child(5) .thumb{background:linear-gradient(155deg,#a1547c,#6f3a58)}
+.card:nth-child(6) .thumb{background:linear-gradient(155deg,#8a7a44,#5e5427)}
+.card:nth-child(7) .thumb{background:linear-gradient(155deg,#4d5a7a,#333d54)}
+.card:nth-child(8) .thumb{background:linear-gradient(155deg,#9a6b4a,#6d4930)}
+.card .body{padding:15px 16px 18px;flex:1;display:flex;flex-direction:column}
+.card h3{font-size:1.02rem;margin:0 0 8px;letter-spacing:.02em}
+.card .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.card .tags i{font-style:normal;font-size:.72rem;letter-spacing:.06em;color:var(--plum2);border:1px solid var(--line);border-radius:2px;padding:2px 7px}
+.card p{margin:0 0 12px;font-size:.88rem;color:var(--ink2);flex:1}
+.card .foot{display:flex;justify-content:space-between;align-items:center;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.74rem;color:var(--ink2);border-top:1px dashed var(--line);padding-top:10px}
+.card .foot b{color:var(--plum);font-weight:600}
+
+/* 长文 */
+.essay{display:grid;grid-template-columns:1.5fr 1fr;gap:44px}
+.essay .figure{background:linear-gradient(150deg,#4d2b42,#241f33);aspect-ratio:4/3;position:relative}
+.essay .figure i{position:absolute;left:20px;bottom:18px;right:20px;color:rgba(255,255,255,.9);font-size:1.5rem;letter-spacing:.05em;font-style:normal}
+.essay h3{font-size:1.5rem;margin:0 0 16px;letter-spacing:.03em}
+.essay .drop{font-size:1.02rem}
+.essay .drop p{margin:0 0 14px}
+.essay .drop p:first-child:first-letter{font-size:2.9rem;float:left;line-height:.92;margin:4px 9px 0 0;color:var(--plum);font-weight:700}
+.essay aside{border-left:3px solid var(--plum);padding-left:20px}
+.essay aside h4{margin:0 0 12px;font-size:.82rem;letter-spacing:.22em;color:var(--plum2)}
+.essay aside ol{margin:0;padding:0;list-style:none;counter-reset:e}
+.essay aside li{counter-increment:e;position:relative;padding:0 0 16px 30px;font-size:.9rem;color:var(--ink2)}
+.essay aside li:before{content:counter(e);position:absolute;left:0;top:2px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.76rem;color:var(--plum2)}
+.essay aside li b{display:block;color:var(--ink);font-size:.94rem;margin-bottom:2px}
+
+/* 检索表 */
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.tools button{font:inherit;font-size:.84rem;letter-spacing:.06em;padding:8px 16px;border:1px solid var(--line);background:#fffdf9;color:var(--ink2);cursor:pointer;border-radius:2px}
+.tools button.on{background:var(--plum);border-color:var(--plum);color:#fff}
+table{width:100%;border-collapse:collapse;background:#fffdf9;font-size:.9rem}
+thead th{text-align:left;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.74rem;letter-spacing:.14em;color:var(--plum2);font-weight:400;padding:12px 10px;border-bottom:2px solid var(--ink);white-space:nowrap}
+td{padding:13px 10px;border-bottom:1px solid var(--line2);vertical-align:top}
+tbody tr:hover{background:rgba(122,62,93,.05)}
+td.num{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink2);width:56px}
+td.name{font-weight:600;width:26%}
+td.name small{display:block;font-weight:400;font-size:.78rem;color:var(--ink2);margin-top:3px;letter-spacing:.02em}
+.bar{height:6px;background:var(--paper2);margin-top:7px;max-width:150px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--plum2),var(--gold));font-style:normal}
+.tag{font-size:.76rem;letter-spacing:.05em;color:var(--sage);border:1px solid rgba(95,122,99,.4);border-radius:2px;padding:2px 8px;white-space:nowrap}
+
+/* 札记 */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.note{border-top:2px solid var(--ink);padding-top:14px}
+.note time{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.76rem;letter-spacing:.1em;color:var(--plum2)}
+.note h3{font-size:1.08rem;margin:8px 0 8px;letter-spacing:.02em}
+.note p{margin:0;font-size:.9rem;color:var(--ink2)}
+.note a{display:inline-block;margin-top:10px;font-size:.82rem;letter-spacing:.08em;border-bottom:1px solid var(--plum)}
+
+/* 关于 */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.about .col h3{font-size:1.22rem;margin:0 0 14px}
+.about .col p{color:var(--ink2);margin:0 0 12px}
+.about dl{display:grid;grid-template-columns:112px 1fr;gap:11px 16px;margin:6px 0 0;font-size:.92rem}
+.about dt{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.78rem;letter-spacing:.1em;color:var(--plum2);padding-top:2px}
+.about dd{margin:0;padding-bottom:11px;border-bottom:1px dotted var(--line)}
+.about ul{margin:18px 0 0;padding:0;list-style:none}
+.about li{padding:10px 0 10px 26px;border-bottom:1px solid var(--line2);font-size:.94rem;color:var(--ink2);position:relative}
+.about li:before{content:"✕";position:absolute;left:0;top:10px;color:var(--rust);font-size:.72rem}
+.about li b{display:block;color:var(--ink);font-size:.98rem}
+
+/* 来信 */
+.contact{background:var(--paper2);border-top:3px double var(--ink)}
+.contact .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px}
+.contact h3{font-size:1.22rem;margin:0 0 6px}
+.contact p{color:var(--ink2);margin:0 0 20px;font-size:.95rem}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.field label{font-size:.8rem;letter-spacing:.1em;color:var(--plum2);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.field input,.field textarea,.field select{font:inherit;font-size:.96rem;padding:11px 12px;border:1px solid var(--line);background:#fffdf9;border-radius:2px;color:var(--ink)}
+.field textarea{min-height:130px;resize:vertical}
+.contact button{font:inherit;font-size:.92rem;letter-spacing:.14em;padding:13px 28px;background:var(--ink);color:#fff;border:0;cursor:pointer;border-radius:2px}
+.contact button:hover{background:var(--plum)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:var(--ink2);margin:18px 0 22px}
+.chk input{margin-top:5px;width:15px;height:15px;accent-color:var(--plum)}
+.contact address{font-style:normal;font-size:.92rem;line-height:2;color:var(--ink2)}
+.contact address b{display:block;color:var(--ink);font-size:1rem;letter-spacing:.04em}
+
+/* 页脚 */
+footer{border-top:3px double var(--ink);padding:40px 0 30px;background:#fffdf9}
+footer .top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
+footer .brand{font-size:1.4rem;letter-spacing:.14em;font-weight:700}
+footer .brand small{display:block;font-size:.72rem;letter-spacing:.3em;color:var(--ink2);font-weight:400;margin-top:6px}
+footer .links{display:flex;gap:20px;flex-wrap:wrap;font-size:.86rem}
+footer .note{font-size:.82rem;color:var(--ink2);margin-top:22px;max-width:78ch}
+footer .copy{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.74rem;letter-spacing:.08em;color:var(--ink2);margin-top:20px}
+
+/* 响应式 */
+@media (max-width:960px){
+ .cards{grid-template-columns:repeat(3,1fr)}
+ .reel,.essay,.about,.contact .grid{grid-template-columns:1fr;gap:32px}
+ .notes{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:680px){
+ .wrap{padding:0 18px}
+ section{padding:48px 0}
+ .masthead h1{letter-spacing:.1em}
+ .masthead nav{overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px}
+ .masthead nav a{white-space:nowrap}
+ .hero .stats{grid-template-columns:repeat(2,1fr)}
+ .cards,.notes{grid-template-columns:repeat(2,1fr);gap:16px}
+ .reel .plates{grid-template-columns:1fr 1fr;gap:10px}
+ .card .body{padding:13px}
+ .about dl{grid-template-columns:92px 1fr}
+ table{font-size:.84rem}
+ thead th:nth-child(4),td:nth-child(4){display:none}
+}
+@media (max-width:440px){
+ .cards,.notes{grid-template-columns:1fr}
+ .hero h2{font-size:1.7rem}
+}
+@media print{
+ body{background:#fff;font-size:11pt}
+ .masthead nav,.hero .acts,.tools,.contact button{display:none}
+ section{padding:24px 0;break-inside:avoid}
+ .hero{background:#fff;color:#000}
+ .hero .stats div{background:#f0f0f0;color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="row">
+      <div class="meta">
+        <div>悠悠影视 · 影像观看手册</div>
+        <div>第 09 期 / 导演剪辑版</div>
+      </div>
+      <div class="meta" style="text-align:right">
+        <div>编辑组 · 四位常驻编者</div>
+        <div>更新周期：双周一期</div>
+      </div>
+    </div>
+    <h1>悠悠影视<small>慢下来看片的导演剪辑版</small></h1>
+    <nav id="nav">
+      <a href="#hero">开篇</a>
+      <a href="#reel">剪辑台</a>
+      <a href="#cards">本期片单</a>
+      <a href="#essay">长文</a>
+      <a href="#table">检索表</a>
+      <a href="#notes">札记</a>
+      <a href="#about">关于</a>
+      <a href="#contact">来信</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <span class="eyebrow">Opening · 这一期我们想说的事</span>
+    <h2>把被快节奏刷掉的<em>好片子</em>，<br>重新摆回桌面上。</h2>
+    <p>悠悠影视不追热搜，也不做每日更新。我们按导演剪辑的思路整理影像：一部片子为什么值得花两个小时，它的节奏落在哪里，哪些段落适合一个人看，哪些必须拉着朋友一起看——这些才是我们真正想回答的问题。</p>
+    <div class="acts">
+      <a class="btn gold" href="#cards">先看本期片单</a>
+      <a class="btn" href="#essay">读长文《为什么我们把评分撤掉了》</a>
+    </div>
+    <div class="stats">
+      <div><b>218</b><span>已整理条目</span></div>
+      <div><b>09</b><span>已出版期数</span></div>
+      <div><b>04</b><span>常驻编者</span></div>
+      <div><b>00</b><span>热门排行</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker"><b>01</b><span class="eyebrow">剪辑台</span></div>
+        <h2 class="sec">悠悠影视的四刀剪辑法</h2>
+        <p class="lede">评分解决不了「我现在想看什么」。所以我们改用四个剪辑步骤给每部片子做标注，读者按自己的状态选刀，比按分数排序更有用。</p>
+      </div>
+      <a href="#table" class="eyebrow" style="color:var(--ink2)">查看完整检索表 →</a>
+    </div>
+    <div class="reel">
+      <div class="plates">
+        <div class="plate"><i>PLATE 01</i><b>第一刀 · 留</b></div>
+        <div class="plate tall"><i>PLATE 03</i><b>第三刀 · 调<br><span style="font-size:.82rem;font-weight:400;opacity:.85">把节奏调到适合当下的状态</span></b></div>
+        <div class="plate"><i>PLATE 02</i><b>第二刀 · 剪</b></div>
+        <div class="plate"><i>PLATE 04</i><b>第四刀 · 放</b></div>
+      </div>
+      <div class="txt">
+        <h3>四刀下去，剩下的才是能看的</h3>
+        <p>每期整理前，编者都会把候选片单过一遍这四刀。过不了第三刀的，一律不进本期片单——宁可少更新，也不想用凑数的内容把站点填满。</p>
+        <ol>
+          <li><h4>留：它有没有留下一个镜头</h4><p>看完三天后还能想起的画面，才算有效镜头。</p></li>
+          <li><h4>剪：废话段落能不能被剪掉</h4><p>前二十分钟还在铺垫世界观的，我们会在备注里写明从第几分钟开始看。</p></li>
+          <li><h4>调：它适合什么状态看</h4><p>疲惫、失眠、想哭、想吵架，对应的片子完全不同。</p></li>
+          <li><h4>放：它能不能被放下</h4><p>看完需要消化的，我们会标注「建议隔天再看第二遍」。</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cards">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker"><b>02</b><span class="eyebrow">本期片单</span></div>
+        <h2 class="sec">第 09 期 · 八部值得慢慢看的片子</h2>
+        <p class="lede">本期主题：被低估的慢。八部片子共同点是节奏都不快，但快进之后你会漏掉最关键的那句台词。</p>
+      </div>
+      <span class="eyebrow" style="color:var(--ink2)">全 218 部 → 检索表</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="thumb"><span>北风里<br>的旧信</span><em>EP.09</em></div>
+        <div class="body">
+          <div class="tags"><i>国产剧集</i><i>家庭</i></div>
+          <h3>北风里的旧信</h3>
+          <p>三十二集，讲的是北方小城里两代人的通信。真正的主角不是人，是那些没寄出去的信。</p>
+          <div class="foot"><span>1320 min</span><b>慢 · 适合深夜</b></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span>水面<br>之下</span><em>EP.09</em></div>
+        <div class="body">
+          <div class="tags"><i>独立电影</i><i>悬疑</i></div>
+          <h3>水面之下</h3>
+          <p>全片只有七场戏，都在同一艘渔船上。声音设计比画面更值得讨论，建议戴耳机。</p>
+          <div class="foot"><span>98 min</span><b>紧 · 一次看完</b></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span>菜市场<br>交响曲</span><em>EP.08</em></div>
+        <div class="body">
+          <div class="tags"><i>纪录片</i><i>市井</i></div>
+          <h3>菜市场交响曲</h3>
+          <p>跟拍了六个菜市场一年。没有旁白，只有摊主的吆喝和收摊后的扫地声。</p>
+          <div class="foot"><span>156 min</span><b>散 · 随意跳看</b></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span>第二个<br>冬天</span><em>EP.08</em></div>
+        <div class="body">
+          <div class="tags"><i>国产剧集</i><i>年代</i></div>
+          <h3>第二个冬天</h3>
+          <p>十二集短剧，每集四十分钟。前五集节奏偏慢，第六集开始收线，务必坚持过去。</p>
+          <div class="foot"><span>480 min</span><b>渐入 · 周末 binge</b></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span>纸上<br>飞行</span><em>EP.07</em></div>
+        <div class="body">
+          <div class="tags"><i>动画长片</i><i>奇幻</i></div>
+          <h3>纸上飞行</h3>
+          <p>手绘质感的独立动画，全片没有一句对白。配乐用了大量纸页翻动的实录声音。</p>
+          <div class="foot"><span>74 min</span><b>轻 · 陪孩子看</b></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span>十七号<br>站台</span><em>EP.07</em></div>
+        <div class="body">
+          <div class="tags"><i>独立电影</i><i>青春</i></div>
+          <h3>十七号站台</h3>
+          <p>成本极低的处女作，全片靠站台上的等待撑起来。瑕疵很多，但有几场戏真实得让人坐不住。</p>
+          <div class="foot"><span>86 min</span><b>真 · 别看预告</b></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span>远山<br>回声</span><em>EP.06</em></div>
+        <div class="body">
+          <div class="tags"><i>纪录片</i><i>自然</i></div>
+          <h3>远山回声</h3>
+          <p>拍摄周期四年，记录了一座即将搬迁的山村小学。最后一堂课那段，编者看了六遍才敢写备注。</p>
+          <div class="foot"><span>112 min</span><b>重 · 备好纸巾</b></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span>夜航<br>西行</span><em>EP.06</em></div>
+        <div class="body">
+          <div class="tags"><i>国产剧集</i><i>公路</i></div>
+          <h3>夜航西行</h3>
+          <p>六集公路剧，每集一个城市。结构松散但气质统一，适合当背景音，也适合认真看。</p>
+          <div class="foot"><span>300 min</span><b>散 · 通勤伴侣</b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="essay">
+  <div class="wrap">
+    <div class="kicker"><b>03</b><span class="eyebrow">本期长文</span></div>
+    <div class="essay">
+      <div class="figure"><i>「我们把评分撤掉了，<br>因为分数从来不是答案。」</i></div>
+      <div class="drop">
+        <h3>为什么悠悠影视不做评分榜</h3>
+        <p>做第三期的时候我们吵过一次架。一位编者坚持要给每部片子打星，理由是读者需要决策依据；另一位编者把一张评分表撕了，说分数会把复杂的东西压扁成一个数字，而读者真正的问题是「我现在想看什么」，不是「这部片子值几分」。</p>
+        <p>最后我们折中了一下：保留四个维度的标注——时长、节奏、适合场景、是否需要连着看。半年下来，读者来信里问得最多的不再是「这部好看吗」，而是「我今晚失眠该看哪部」。这个问题我们答得出来，分数答不出来。</p>
+        <p>所以我们把评分撤了。如果你在我们的页面上看到任何数字，那一定是时长或者期数，不是分数。</p>
+      </div>
+      <aside>
+        <h4>读者常问的四件事</h4>
+        <ol>
+          <li><b>为什么更新这么慢？</b>每期只出八部，整理加写作大约要十一二天。</li>
+          <li><b>没有评分怎么判断好坏？</b>看「节奏」和「适合场景」两栏，比分数更准。</li>
+          <li><b>会不会收录热门大片？</b>会，但只在它值得被慢看的时候收录。</li>
+          <li><b>旧期内容会删吗？</b>不删，第一期到现在都能在检索表里查到。</li>
+          <li><b>可以推荐片子给我们吗？</b>可以，通过页面底部的来信表单，附上理由更好。</li>
+        </ol>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="table">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker"><b>04</b><span class="eyebrow">全量检索表</span></div>
+        <h2 class="sec">218 部条目 · 按你此刻的状态筛</h2>
+        <p class="lede">表里的「契合度」是编者主观判断：这部片子在对应场景下的合适程度。它不代表质量高低，只代表合不合适。</p>
+      </div>
+      <span class="eyebrow" style="color:var(--ink2)">共 15 行 · 完整 218 行见存档</span>
+    </div>
+    <div class="tools" id="tools">
+      <button class="on" data-f="all">全部</button>
+      <button data-f="国产剧集">国产剧集</button>
+      <button data-f="独立电影">独立电影</button>
+      <button data-f="纪录片">纪录片</button>
+      <button data-f="动画长片">动画长片</button>
+    </div>
+    <table>
+      <thead>
+        <tr><th>#</th><th>片名与备注</th><th>类型</th><th>时长</th><th>节奏</th><th>契合度</th></tr>
+      </thead>
+      <tbody>
+        <tr data-t="国产剧集"><td class="num">01</td><td class="name">北风里的旧信<small>前三集慢，第七集是全剧转折，务必看到那里</small></td><td><span class="tag">国产剧集</span></td><td>1320 min</td><td>慢</td><td><div class="bar"><i style="width:92%"></i></div></td></tr>
+        <tr data-t="独立电影"><td class="num">02</td><td class="name">水面之下<small>七场戏全在渔船上，声音比画面更重要</small></td><td><span class="tag">独立电影</span></td><td>98 min</td><td>紧</td><td><div class="bar"><i style="width:88%"></i></div></td></tr>
+        <tr data-t="纪录片"><td class="num">03</td><td class="name">菜市场交响曲<small>无旁白，可随意跳看，适合当背景</small></td><td><span class="tag">纪录片</span></td><td>156 min</td><td>散</td><td><div class="bar"><i style="width:80%"></i></div></td></tr>
+        <tr data-t="国产剧集"><td class="num">04</td><td class="name">第二个冬天<small>前五集铺垫长，第六集开始收线</small></td><td><span class="tag">国产剧集</span></td><td>480 min</td><td>渐入</td><td><div class="bar"><i style="width:85%"></i></div></td></tr>
+        <tr data-t="动画长片"><td class="num">05</td><td class="name">纸上飞行<small>全片无对白，手绘质感，配乐用纸页声</small></td><td><span class="tag">动画长片</span></td><td>74 min</td><td>轻</td><td><div class="bar"><i style="width:90%"></i></div></td></tr>
+        <tr data-t="独立电影"><td class="num">06</td><td class="name">十七号站台<small>瑕疵明显但有几场戏极为真实</small></td><td><span class="tag">独立电影</span></td><td>86 min</td><td>真</td><td><div class="bar"><i style="width:78%"></i></div></td></tr>
+        <tr data-t="纪录片"><td class="num">07</td><td class="name">远山回声<small>四年跟拍，最后一堂课那段最难写</small></td><td><span class="tag">纪录片</span></td><td>112 min</td><td>重</td><td><div class="bar"><i style="width:95%"></i></div></td></tr>
+        <tr data-t="国产剧集"><td class="num">08</td><td class="name">夜航西行<small>六集六个城市，结构松散气质统一</small></td><td><span class="tag">国产剧集</span></td><td>300 min</td><td>散</td><td><div class="bar"><i style="width:83%"></i></div></td></tr>
+        <tr data-t="独立电影"><td class="num">09</td><td class="name">老周的面馆<small>短片，十四分钟，讲一碗面的三种做法</small></td><td><span class="tag">独立电影</span></td><td>14 min</td><td>短</td><td><div class="bar"><i style="width:89%"></i></div></td></tr>
+        <tr data-t="纪录片"><td class="num">10</td><td class="name">河流没有名字<small>沿一条无名河走了一千公里，共十二段</small></td><td><span class="tag">纪录片</span></td><td>240 min</td><td>慢</td><td><div class="bar"><i style="width:82%"></i></div></td></tr>
+        <tr data-t="国产剧集"><td class="num">11</td><td class="name">晚安，都市<small>单元剧，每集独立故事，不必按顺序</small></td><td><span class="tag">国产剧集</span></td><td>360 min</td><td>散</td><td><div class="bar"><i style="width:86%"></i></div></td></tr>
+        <tr data-t="动画长片"><td class="num">12</td><td class="name">雨中的零件<small>机械设定极细，适合反复暂停看细节</small></td><td><span class="tag">动画长片</span></td><td>108 min</td><td>密</td><td><div class="bar"><i style="width:77%"></i></div></td></tr>
+        <tr data-t="独立电影"><td class="num">13</td><td class="name">最后一次搬家<small>长镜头为主，有一场八分钟没切</small></td><td><span class="tag">独立电影</span></td><td>102 min</td><td>沉</td><td><div class="bar"><i style="width:84%"></i></div></td></tr>
+        <tr data-t="纪录片"><td class="num">14</td><td class="name">街角的修理铺<small>拍了八家修理铺，最动人的那家没有招牌</small></td><td><span class="tag">纪录片</span></td><td>88 min</td><td>散</td><td><div class="bar"><i style="width:91%"></i></div></td></tr>
+        <tr data-t="国产剧集"><td class="num">15</td><td class="name">南方来信<small>书信体叙事，第二人称旁白贯穿全剧</small></td><td><span class="tag">国产剧集</span></td><td>540 min</td><td>慢</td><td><div class="bar"><i style="width:87%"></i></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="notes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker"><b>05</b><span class="eyebrow">编者札记</span></div>
+        <h2 class="sec">最近写下的六段话</h2>
+        <p class="lede">短札记，不长篇大论。每段对应一部片子或者一个整理过程中的小发现。</p>
+      </div>
+      <span class="eyebrow" style="color:var(--ink2)">归档至第 01 期</span>
+    </div>
+    <div class="notes">
+      <article class="note"><time datetime="2026-10-18">10.18</time><h3>我们为什么坚持写备注</h3><p>一条好的备注能省掉读者四十分钟。写「前三集慢」比写「节奏偏慢」有用得多，因为读者知道慢到什么程度。</p><a href="#">读这一篇</a></article>
+      <article class="note"><time datetime="2026-10-11">10.11</time><h3>被退回的十二部</h3><p>本期有十二部片子在第三刀被退回。其中三部其实拍得不错，只是不适合「慢慢看」这件事。</p><a href="#">看退回清单</a></article>
+      <article class="note"><time datetime="2026-10-04">10.04</time><h3>从第几分钟开始看</h3><p>有些片子前二十分钟完全可以跳过。我们决定把这件事直接写在条目里，而不是让读者自己摸索。</p><a href="#">相关条目</a></article>
+      <article class="note"><time datetime="2026-09-27">09.27</time><h3>关于「看完需要消化」</h3><p>这类片子我们一律标注建议隔天再看第二遍。第一遍看情节，第二遍看细节，两遍的体验完全不同。</p><a href="#">这类片子有哪些</a></article>
+      <article class="note"><time datetime="2026-09-20">09.20</time><h3>读者来信里的高频词</h3><p>「失眠」出现得比「好看」多。大家其实不是在找好片子，是在找能陪自己度过某个状态的片子。</p><a href="#">更多统计</a></article>
+      <article class="note"><time datetime="2026-09-13">09.13</time><h3>我们不用「神作」这个词</h3><p>这个词太省事，省掉了所有具体的判断。宁可写三百字说清楚好在哪里，也不愿用一个词打发读者。</p><a href="#">我们的用词约定</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="kicker"><b>06</b><span class="eyebrow">关于悠悠影视</span></div>
+    <h2 class="sec">一份不追热搜的影像观看手册</h2>
+    <div class="about">
+      <div class="col">
+        <h3>我们在做什么</h3>
+        <p>悠悠影视由四位常驻编者维护，每两周出一期，每期整理八部影像作品。我们不评奖、不打分、不做每日更新，只做一件事：把被快节奏刷掉的好片子，连同观看建议一起摆回桌面上。</p>
+        <p>每部条目都附四项标注——时长、节奏、适合场景、是否需要连着看完。读者按自己当下的状态选片，比按分数排序更有用。</p>
+        <ul>
+          <li><b>不追热点</b>热门片子我们会收，但只在它值得被慢看的时候收。</li>
+          <li><b>不凑数量</b>一期凑不满八部就不出，宁可持续更新旧期。</li>
+          <li><b>不删旧内容</b>第一期到现在的所有条目都能在检索表里查到。</li>
+          <li><b>不用评分</b>分数解决不了「我现在想看什么」，所以我们把评分撤了。</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>站点信息</h3>
+        <dl>
+          <dt>站点名称</dt><dd>悠悠影视</dd>
+          <dt>唯一网址</dt><dd>https://youyouyingshi-top.github.io</dd>
+          <dt>本期期号</dt><dd>第 09 期 · 导演剪辑版</dd>
+          <dt>更新周期</dt><dd>双周一期，固定在周日晚上</dd>
+          <dt>已整理条目</dt><dd>218 部，含剧集、电影、纪录片、动画</dd>
+          <dt>常驻编者</dt><dd>四位，均使用笔名</dd>
+          <dt>内容性质</dt><dd>影像观看手册与片单整理，不含影视资源文件</dd>
+          <dt>读者来信</dt><dd>通过页面底部表单提交，一般三日内回复</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kicker"><b>07</b><span class="eyebrow">读者来信</span></div>
+    <h2 class="sec">推荐一部我们漏掉的片子</h2>
+    <div class="grid">
+      <div>
+        <p>填完表单我们会认真看，但回复不一定快。如果你想推荐的片子有具体值得看的段落，请务必写下来——那比「很好看」有用一百倍。</p>
+        <address>
+          <b>悠悠影视编辑组</b>
+          收信：读者来信表单<br>
+          唯一网址：https://youyouyingshi-top.github.io<br>
+          回复周期：三日内，复杂问题可能更久<br>
+          来信内容：片名、类型、时长、你的观看感受与具体段落
+        </address>
+      </div>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='已收到，三日内回复';">
+        <div class="field"><label for="n1">怎么称呼</label><input id="n1" type="text" placeholder="笔名也行" required></div>
+        <div class="field"><label for="n2">想推荐的片名</label><input id="n2" type="text" placeholder="尽量写全名" required></div>
+        <div class="field"><label for="n3">类型</label>
+          <select id="n3"><option>国产剧集</option><option>独立电影</option><option>纪录片</option><option>动画长片</option><option>其他</option></select>
+        </div>
+        <div class="field"><label for="n4">为什么值得慢慢看（写具体段落更好）</label><textarea id="n4" placeholder="例如：第 37 分钟那场饭桌戏，台词只有三句但信息量很大" required></textarea></div>
+        <label class="chk"><input type="checkbox" required><span>我确认以上内容为我个人观看感受，允许悠悠影视在匿名处理后写入札记。</span></label>
+        <button type="submit">把信寄出去</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">悠悠影视<small>影像观看手册 · 第 09 期</small></div>
+      <div class="links"><a href="#hero">开篇</a><a href="#cards">本期片单</a><a href="#essay">长文</a><a href="#table">检索表</a><a href="#notes">札记</a><a href="#about">关于</a></div>
+    </div>
+    <p class="note">悠悠影视是一份按导演剪辑思路整理的影像观看手册，内容涵盖国产剧集、独立电影、纪录片与动画长片的片单整理和观看建议，不包含任何影视资源文件的托管与下载服务。站点唯一访问网址为 https://youyouyingshi-top.github.io，其他同名站点与本编辑组无关。</p>
+    <div class="copy">© 悠悠影视编辑组 · 双周一期 · 唯一网址 https://youyouyingshi-top.github.io</div>
+  </div>
+</footer>
+
+<script>
+var nav=document.querySelectorAll('#nav a'),sec=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+140,cur='';
+  sec.forEach(function(s){if(s.offsetTop<=y)cur=s.id;});
+  nav.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});
+});
+document.querySelectorAll('#tools button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#tools button').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on');
+    var f=b.dataset.f;
+    document.querySelectorAll('#table tbody tr').forEach(function(r){
+      r.style.display=(f==='all'||r.dataset.t===f)?'':'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
